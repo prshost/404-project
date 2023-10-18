@@ -1,9 +1,7 @@
-let container = document.querySelector(".container");
+let search__body = document.querySelector('.search__body');
+let buttonClick = document.querySelector('button');
 
-
-window.addEventListener('mousemove', (e) => {
-let x = e.clientX / 5
-let y = e.clientY / 5
-    container.style.backgroundPositionY = `${y}px`;
-    container.style.backgroundPositionX = `${x}px`;
-})
+buttonClick.onclick = (e) => {
+    search__body.classList.toggle('active')
+    search__body.firstElementChild.focus()
+}

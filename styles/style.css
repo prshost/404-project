@@ -24,6 +24,9 @@
   ul {
     list-style: none;
   }
+  input {
+      font-family: vazie;
+  }
   a {
     text-decoration: none;
     color: #000;
@@ -47,32 +50,70 @@
   .btn-succes:hover {
     background-color: rgba(21, 180, 212, 0.779);
   }
-.container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
+.search {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    background: #242626 url("../img/404.png");
-  }
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.search__body {
+    position: relative;
+    width: 325px;
+    height: auto;
+}
+.search button {
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    border: none;
+    position: absolute;
+    left: 287px;
+    top: 6px;
+    background: #fff;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.search__body.active button {
+    left: 10px;
+    top: 6px;
+}
 
-.container h1 {
-    font-size: 10rem;
-    margin-top: 200px;
-    color: #fff;
-    line-height: 10rem;
+.btn-circle {
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    background: #fff;
+    top: 0;
+    left: 0;
+    border: 3px solid #818181;
+    border-radius: 50px;
 }
-.container h4 {
-    font-size: 38px;
-    color: #fff;
+.btn-line {
+    width: 10px;
+    height: 1px;
+    position: absolute;
+    background: #fff;
+    bottom: 11px;
+    right: 7px;
+    border: 3px solid #818181;
+    border-radius: 50px;
+    transform: rotate(45deg);
 }
-.container p {
-    font-size: 1.3rem;
-    color: #fff;
-    line-height: 5rem;
-    margin-top: 7rem;
+#search__input {
+    width: 18px;
+    height: 40px;
+    border-radius: 50px;
+    outline: none;
+    border: 2px solid #2196d9;
+    padding: 0px 12px;
+    transition: .4s ease;
 }
-.container a {
-    color: #fff;
+.search__body.active #search__input {
+    width: 300px;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    font-size: 16px;
 }
